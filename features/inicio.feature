@@ -8,3 +8,6 @@ Scenario: ver un titulo de bienvenida
 	Given abro la aplicacion 
 	Then debo ver "Bienvenido a AHORCADO MUSICAL"
 	
+Scenario: para la palabra "CHANTAJE"
+	Given abro la aplicacion 
+	Then debo ver "_______" guiones bajos

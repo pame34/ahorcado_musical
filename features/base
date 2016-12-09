@@ -1,0 +1,30 @@
+
+Given(/^abro la aplicacion$/) do
+	visit '/'
+end
+
+Then(/^debo ver "([^"]*)"$/) do |texto|
+  expect(page.body).to match /#{texto}/m
+end
+
+When(/^ingreso a "([^"]*)" y a "([^"]*)"$/) do |j1, j2|
+	fill_in("jugador1", :with => j1)
+	fill_in("jugador2", :with => j2)
+end
+
+When(/^seleccion jugar$/) do
+	click_button("jugar")
+end
+
+Given(/^inicie un juego$/) do
+  	visit '/'
+  	fill_in("jugador1", :with => "j1")
+	fill_in("jugador2", :with => "j2")
+	click_button("jugar")
+end
+
+When(/^el "([^"]*)" marca un punto$/) do |jugador|
+  click_button(jugador)
+end
+
+
