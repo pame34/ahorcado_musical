@@ -16,6 +16,7 @@ get '/' do
 end
 
 post '/validarLetraIngresada' do
-  session["ahorcadoMusical"].validacionLetra
+  letra=params["LetraBuscar"]
+  session["ahorcadoMusical"].validacionLetra letra
 	erb :index
 end

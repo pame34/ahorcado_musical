@@ -12,9 +12,10 @@ class AhorcadoMusical
     def initialize textoAdivinar = "CHANTAJE"
         @textoAdivinar = textoAdivinar
         @cantidadVidas = 7
+        @imagen = IMAGENES[@cantidadVidas - @cantidadVidas]
         texto=""
         
-        for i in 0..(@textoAdivinar.length)
+        for i in 0..(@textoAdivinar.length-1)
         texto = texto + "-"
         end
         
@@ -24,19 +25,42 @@ class AhorcadoMusical
     
     
     def adivinacion
-        @MensajeDeValidacion
+        if @cantidadVidas==0
+            "AHORCADO"
+        else
+            @MensajeDeValidacion
+        end
+    end
+    
+    def cantidadVidas
+        @cantidadVidas
     end
     
     def imagenActual
-       IMAGENES[@cantidadVidas - 7]
+       @imagen
     end
     
-    def validacionLetra letra
+    def validacionLetra letra="A"
        
-       @MensajeDeValidacion =  "---A"
-       
-       
-       
+        if @cantidadVidas==0
+            @MensajeDeValidacion = "AHORCADO"
+        else
+        
+            resto=-1
+            for i in 0..(@textoAdivinar.length-1)
+                
+                if @textoAdivinar[i, 1] == letra
+                    @MensajeDeValidacion[i, 1] = letra
+                    resto=0
+                end
+            end
+            
+            @cantidadVidas+=resto
+            
+            @imagen = IMAGENES[7-@cantidadVidas]
+        
+        end
+        
+        @MensajeDeValidacion 
     end
-    
 end

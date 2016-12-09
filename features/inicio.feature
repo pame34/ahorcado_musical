@@ -23,13 +23,12 @@ Scenario: para la palabra "HOLA"
 	Given abro la aplicacion 
 	Then debo ver "----" guiones bajos
 
-Scenario: para la  palabra "HOLA" 
+
+Scenario: para la  palabra "CHANTAJE" 
 	Given abro la aplicacion 
     And ingreso la letra "A"  
     And seleccion el boton "botonValidar"
-	Then debo ver "---A"
-	
-	
+	Then debo ver "--A--A--"
 	
 	
 	
