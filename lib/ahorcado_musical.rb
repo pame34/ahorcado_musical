@@ -11,11 +11,11 @@ class AhorcadoMusical
     
     def initialize textoAdivinar = "CHANTAJE"
         @textoAdivinar = textoAdivinar
-        @imagenActual = IMAGENES[0]
+        @cantidadVidas = 7
     end
     
     def imagenActual
-        @imagenActual
+       IMAGENES[@cantidadVidas - 7]
     end
     
     def adivinacion
