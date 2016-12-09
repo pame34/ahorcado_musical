@@ -12,6 +12,7 @@ class AhorcadoMusical
     def initialize textoAdivinar = "CHANTAJE"
         @textoAdivinar = textoAdivinar
         @cantidadVidas = 7
+        texto=""
         
         for i in 0..(@textoAdivinar.length)
         texto = texto + "-"
@@ -34,14 +35,7 @@ class AhorcadoMusical
        
        @MensajeDeValidacion =  "---A"
        
-        texto = ""
-        for i in 0..(@textoAdivinar.length)
-            
-            if @textoAdivinar[i, 1] == letra
-                @MensajeDeValidacion[i, 1] = letra
-            end
-        end
-        @MensajeDeValidacion
+       
        
     end
     

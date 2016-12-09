@@ -74,4 +74,18 @@ Scenario: ingresar a del potro y murray
 
 
 
+Scenario: para la  palabra "HOLA" 
+	Given abro la aplicacion 
+    And ingreso la letra "A"  
+    And seleccion el boton "botonValidar"
+	Then debo ver "---A"
+	
 
+ texto = ""
+        for i in 0..(@textoAdivinar.length)
+            
+            if @textoAdivinar[i, 1] == letra
+                @MensajeDeValidacion[i, 1] = letra
+            end
+        end
+        @MensajeDeValidacion
