@@ -13,3 +13,8 @@ Scenario: para la palabra "CHANTAJE"
 	Given abro la aplicacion 
 	Then debo ver "_______" guiones bajos
 
+
+Scenario: ver un campo que me permita ingresar una letra
+	Given abro la aplicacion 
+	 Then debo ver "LetraBuscar"
+	
