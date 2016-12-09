@@ -6,8 +6,8 @@ class AhorcadoMusical
     
     def adivinacion
         texto = ""
-        for i in 0..@textoAdivinar.length
-            texto = texto + "_"
+        for i in 0..(@textoAdivinar.length)
+            texto = texto + "_" + " "
         end
         texto
     end
