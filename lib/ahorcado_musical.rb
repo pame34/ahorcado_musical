@@ -12,6 +12,8 @@ class AhorcadoMusical
     def initialize textoAdivinar = "CHANTAJE"
         @textoAdivinar = textoAdivinar
         @cantidadVidas = 7
+        @texto = ""
+        @letra = ""
     end
     
     def imagenActual
@@ -19,14 +21,17 @@ class AhorcadoMusical
     end
     
     def adivinacion
-        texto = ""
-        for i in 0..(@textoAdivinar.length)
-            texto = texto + "_" + " "
-        end
-        texto
-    end
-    
         
-    
-    
+        for i in 0..(@textoAdivinar.length)
+            guion = "_"
+            
+            puts @textoAdivinar[i, 1]
+            if @textoAdivinar[i, 1] == @letra
+                guion = @letra
+            end
+            @texto = @texto + guion + " "
+        end
+        
+        @texto
+    end
 end
