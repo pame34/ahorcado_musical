@@ -14,3 +14,8 @@ get '/' do
   session["ahorcadoMusical"] = AhorcadoMusical.new
 	erb :index
 end
+
+post '/validarLetraIngresada' do
+  session["ahorcadoMusical"].validacionLetra
+	erb :index
+end
