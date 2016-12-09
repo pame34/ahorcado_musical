@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'better_errors'
+require "./lib/ahorcado_musical"
 
 configure :development do
   use BetterErrors::Middleware
@@ -10,5 +11,6 @@ enable :sessions
 set :session_secret, 'thisIsAKleerSecret'
 
 get '/' do
+  session["ahorcadoMusical"] = AhorcadoMusical.new
 	erb :index
 end

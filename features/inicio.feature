@@ -11,3 +11,7 @@ Scenario: ver un titulo de bienvenida
 Scenario: para la palabra "CHANTAJE"
 	Given abro la aplicacion 
 	Then debo ver "_______" guiones bajos
+	
+Scenario: para la palabra "HOLA"
+	Given abro la aplicacion 
+	Then debo ver "____" guiones bajos
