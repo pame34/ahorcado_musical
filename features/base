@@ -28,3 +28,46 @@ When(/^el "([^"]*)" marca un punto$/) do |jugador|
 end
 
 
+
+
+
+
+
+
+feature
+
+Scenario: ingresar a federer y nadal
+	Given abro la aplicacion
+	When ingreso a "Federer" y a "Nadal"
+	And seleccion jugar
+	Then debo ver "Federer vs Nadal"
+
+Scenario: ingresar a del potro y murray
+	Given abro la aplicacion
+	When ingreso a "del potro" y a "murray"
+	And seleccion jugar
+	Then debo ver "del potro vs murray"
+	
+	
+	
+	
+	
+	
+	INDEX
+	
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>Tennis</title>
+</head>
+<body>
+<h1>Bienvenido al juego de Tennis</h1>
+
+<form method="post" action="/jugar">
+	<input type="text" name="jugador1">
+	<input type="text" name="jugador2">
+	<input type="submit" name="jugar" value="jugar">
+</form>
+
+</body>
+</html>
