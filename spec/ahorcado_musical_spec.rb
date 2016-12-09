@@ -1,3 +1,3 @@
-require ".lib/ahorcado_musical.rb"
-describe ahorcado_musical do
+require "./lib/ahorcado_musical"
+describe AhorcadoMusical do
 end
