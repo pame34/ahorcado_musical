@@ -22,3 +22,14 @@ Scenario: ver un campo que me permita ingresar una letra
 Scenario: para la palabra "HOLA"
 	Given abro la aplicacion 
 	Then debo ver "_ _ _ _" guiones bajos
+
+Scenario: para la  palabra "HOLA" 
+	Given abro la aplicacion 
+    And ingreso la letra "A"  
+    And seleccion el boton "botonValidar"
+	Then debo ver "_ _ _ A"
+	
+	
+	
+	
+	

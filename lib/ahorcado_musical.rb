@@ -2,16 +2,22 @@ class AhorcadoMusical
     
     def initialize textoAdivinar = "CHANTAJE"
         @textoAdivinar = textoAdivinar
-    end
-    
-    def adivinacion
+        @MensajeDeValidacion = ""
+        
         texto = ""
         for i in 0..(@textoAdivinar.length)
             texto = texto + "_" + " "
         end
-        texto
+        @MensajeDeValidacion = texto
+    end
+    
+    def adivinacion
+        @MensajeDeValidacion
     end
         
     
+    def validacionLetra
+       @MensajeDeValidacion =  "_ _ _ A"
+    end
     
 end

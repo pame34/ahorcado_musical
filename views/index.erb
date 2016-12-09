@@ -4,17 +4,15 @@
     </head>
     
     <body>
-<<<<<<< HEAD
-    <h1>"________"</h1>
 
+     <form action="validarLetraIngresada" method="POST">
+        <H1>ingrese letra</H1>
+        <input type="text" name="LetraBuscar"></input>
     
-    <input type="text" name="LetraBuscar"></input>
-
-<input type="label" name="palabraAdivinar">
-
-=======
+        <input type="submit" name="botonValidar" value="botonValidar">
+        
+        <h1><%=	session["ahorcadoMusical"].adivinacion %></h1>
+     </form>
     
-    <h1><%=	session["ahorcadoMusical"].adivinacion %></h1>
->>>>>>> acac7b6ae55c02f1bd5ea02a39b291a55e444e38
     </body>
 </html>
